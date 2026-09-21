@@ -1,0 +1,15 @@
+services:
+
+  reservation-service:
+    build:
+      context: ./services/reservation-service
+    container_name: reservation-service
+    ports:
+      - "8001:8001"
+
+  auth-service:
+    build:
+      context: ./services/auth-service
+    container_name: auth-service
+    ports:
+      - "8002:8002"
